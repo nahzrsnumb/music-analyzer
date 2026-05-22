@@ -1,1 +1,197 @@
-aW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcyc7CmltcG9ydCB7IGZldGNoQXVkaW9CdWZmZXIgfSBmcm9tICcuLi9hdWRpby9idWZmZXJMb2FkZXIuanMnOwoKZXhwb3J0IGNvbnN0IGtleVJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7CgovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KLy8gS1JVTUBIQU5TTC1TQ0hNVUNLU0xFUiBLRVkgUFJPRklMRVMKLy8gVGhlc2UgcHJvZmlsZXMgZW5jb2RlIHRoZSBwZXJjZWl2ZWQgc3RhYmlsaXR5IG9mIGVhY2ggb2YgdGhlIDEyCi8vIHNlbWl0b25lcyByZWxhdGl2ZSB0byBhIHRvbmljIGZvciBib3RoIG1ham9yIGFuZCBtaW5vciBtb2Rlcy4KLy8gUmVmOiBLcnVtaGFuc2wgJiBLessly8gKDE5ODIpLCBKRVAgR2VuZXJhbC4KLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Cgpjb25zdCBLUF9NQUpPUiA9IFsKICA2LjM1LCAyLjIzLCAzLjQ4LCAyLjMzLCA0LjM4LCA0LjA5LAogIDIuNTIsIDUuMTksIDIuMzksIDMuNjYsIDIuMjksIDIuODgsCl07Cgpjb25zdCBLUF9NSU5PUiA9IFsKICA2LjMzLCAyLjY4LCAzLjUyLCA1LjM4LCAyLjYwLCAzLjUzLAogIDIuNTQsIDQuNzUsIDMuOTgsIDIuNjksIDMuMzQsIDMuMTcsCl07Cgpjb25zdCBOT1RFX05BTUVTID0gWydDJywgJ0MjJywgJ0QnLCAnRCMnLCAnRScsICdGJywgJ0YjJywgJ0cnLCAnRyMnLCAnQScsICdBIycsICdCJ107CgovLyBBbHRlcm5hdGl2ZSBuYW1lcyBmb3IgZmxhdCBub3RhdGlvbiAodXNlZCB3aGVuIG1pbm9yIHRvIGZvbGxvdyBjb252ZW50aW9uKQpjb25zdCBOT1RFX05BTUVTX0ZMQVQgPSBbJ0MnLCAnRGInLCAnRCcsICdFYicsICdFJywgJ0YnLCAnR2InLCAnRycsICdBYicsICdBJywgJ0JiJywgJ0InXTsKCi8vIEtleXMgdGhhdCBhcmUgY29udmVudGlvbmFsbHkgd3JpdHRlbiB3aXRoIGZsYXRzIGluIG1pbm9yIG1vZGUKY29uc3QgRkxBVF9NSU5PUl9LRVlTID0gbmV3IFNldChbMSwgMywgNiwgOCwgMTBdKTsgLy8gRGIgRWIgR2IgQWIgQmIKCi8qKgogKiBSb3RhdGVzIGEgcHJvZmlsZSBhcnJheSBieSBgc2VtaXRvbmVzYCBzdGVwcy4KICovCmZ1bmN0aW9uIHJvdGF0ZShwcm9maWxlLCBzZW1pdG9uZXMpIHsKICBjb25zdCBuID0gcHJvZmlsZS5sZW5ndGg7CiAgcmV0dXJuIHByb2ZpbGUubWFwKChfLCBpKSA9PiBwcm9maWxlWyhpICsgc2VtaXRvbmVzKSAlIG5dKTsKfQoKLyoqCiAqIFBlYXJzb24gY29ycmVsYXRpb24gY29lZmZpY2llbnQgYmV0d2VlbiB0d28gdmVjdG9ycy4KICovCmZ1bmN0aW9uIHBlYXJzb24oYSwgYikgewogIGNvbnN0IG4gPSBhLmxlbmd0aDsKICBjb25zdCBtZWFuQSA9IGEucmVkdWNlKCh4LCB5KSA9PiB4ICsgeSwgMCkgLyBuOwogIGNvbnN0IG1lYW5CID0gYi5yZWR1Y2UoKHgsIHkpID0+IHggKyB5LCAwKSAvIG47CiAgbGV0IG51bSA9IDAsIGRlbkEgPSAwLCBkZW5CID0gMDsKICBmb3IgKGxldCBpID0gMDsgaSA8IG47IGkrKykgewogICAgY29uc3QgZGEgPSBhW2ldIC0gbWVhbkE7CiAgICBjb25zdCBkYiA9IGJbaV0gLSBtZWFuQjsKICAgIG51bSAgKz0gZGEgKiBkYjsKICAgIGRlbkEgKz0gZGEgKiBkYTsKICAgIGRlbkIgKz0gZGIgKiBkYjsKICB9CiAgY29uc3QgZGVub20gPSBNYXRoLnNxcnQoZGVuQSAqIGRlbkIpOwogIHJldHVybiBkZW5vbSA9PT0gMCA/IDAgOiBudW0gLyBkZW5vbTsKfQoKCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQovLyBDSFJPTUEgVkVDVE9SIEVYVFJBQ1RJT04KLy8gQWdncmVnYXRlcyBlbmVyZ3kgcGVyIHBpdGNoIGNsYXNzICgwLTExKSBhY3Jvc3MgdGhlIHdob2xlIHRyYWNrCi8vIHVzaW5nIGEgc3RlcmVvLXRvLW1vbm8gRFRGVCBhcHByb3hpbWF0aW9uIHRhaWxvcmVkIGZvciBub3RlIGRldGVjdGlvbi4KLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgovKioKICogQnVpbGRzIGEgMTItYmluIGNocm9tYSB2ZWN0b3IgZnJvbSByYXcgUENNIGRhdGEuCiAqIEBwYXJhbSB7RmxvYXQzMkFycmF5fSBjaGFubmVsRGF0YQogKiBAcGFyYW0ge251bWJlcn0gc2FtcGxlUmF0ZQogKiBAcmV0dXJucyB7bnVtYmVyW119ICBBcnJheSBvZiAxMiBub3JtYWxpemVkIGVuZXJneSB2YWx1ZXMgKG9uZSBwZXIgc2VtaXRvbmUpCiAqLwpmdW5jdGlvbiBidWlsZENocm9tYVZlY3RvcihjaGFubmVsRGF0YSwgc2FtcGxlUmF0ZSkgewogIGNvbnN0IGNocm9tYSA9IG5ldyBGbG9hdDY0QXJyYXkoMTIpLmZpbGwoMCk7CgogIC8vIEFuYWx5emUgZnJhbWVzIG9mIDQwOTYgc2FtcGxlcyB3aXRoIDUwJSBvdmVybGFwCiAgY29uc3QgRlJBTUVfU0laRSA9IDQwOTY7CiAgY29uc3QgSE9QX1NJWkUgICA9IDIwNDg7CiAgLy8gUHJlLWNvbXB1dGUgZXhwZWN0ZWQgZnJlcXVlbmNpZXMgZm9yIGVhY2ggbm90ZSBhY3Jvc3MgNyBvY3RhdmVzCiAgLy8gKEMxIHRvIEI3LCBjb3ZlcmluZyB0aGUgZW50aXJlIG11c2ljYWwgcmFuZ2Ugb2YgcHJvZHVjdGlvbikKICBjb25zdCBub3RlRnJlcXMgPSBbXTsKICBmb3IgKGxldCBvY3RhdmUgPSAxOyBvY3RhdmUgPD0gNzsgb2N0YXZlKyspIHsKICAgIGZvciAobGV0IHBjID0gMDsgcGMgPCAxMjsgcGMrKykgewogICAgICAvLyBNSURJIG5vdGUgbnVtYmVyIGZvcm11bGE6IEEgNDQwSHogPSBNSURJIDY5CiAgICAgIGNvbnN0IG1pZGkgPSBvY3RhdmUgKiAxMiArIHBjOwogICAgICBjb25zdCBmcmVxID0gNDQwICogTWF0aC5wb3coMiwgKG1pZGkgLSA2OSkgLyAxMik7CiAgICAgIGlmIChmcmVxIDwgc2FtcGxlUmF0ZSAvIDIpIHsgLy8gYmVsb3cgTnlxdWlzdAogICAgICAgIG5vdGVGcmVxcy5wdXNoKHsgcGMsIGZyZXEgfSk7CiAgICAgIH0KICAgIH0KICB9CgogIGxldCBmcmFtZUNvdW50ID0gMDsKICBmb3IgKGxldCBzdGFydCA9IDA7IHN0YXJ0ICsgRlJBTUVfU0laRSA8IGNoYW5uZWxEYXRhLmxlbmd0aDsgc3RhcnQgKz0gSE9QX1NJWkUpIHsKICAgIGNvbnN0IGZyYW1lID0gY2hhbm5lbERhdGEuc3ViYXJyYXkoc3RhcnQsIHN0YXJ0ICsgRlJBTUVfU0laRSk7CgogICAgLy8gQXBwbHkgSGFubmluZyB3aW5kb3cgdG8gcmVkdWNlIHNwZWN0cmFsIGxlYWthZ2UKICAgIGNvbnN0IHdpbmRvd2VkID0gbmV3IEZsb2F0MzJBcnJheShGUkFNRV9TSVpFKTsKICAgIGZvciAobGV0IGkgPSAwOyBpIDwgRlJBTUVfU0laRTsgaSsrKSB7CiAgICAgIGNvbnN0IHcgPSAwLjUgKiAoMSAtIE1hdGguY29zKCgyICogTWF0aC5QSSAqIGkpIC8gKEZSQU1FX1NJWkUgLSAxKSkpOwogICAgICB3aW5kb3dlZFtpXSA9IGZyYW1lW2ldICogdzsKICAgIH0KCiAgICAvLyBDb21wdXRlIERGVCBtYWduaXR1ZGUgb25seSBhdCBub3RlIGZyZXF1ZW5jaWVzIChHb2VydHplbCBpbmxpbmUpCiAgICBmb3IgKGNvbnN0IHsgcGMsIGZyZXEgfSBvZiBub3RlRnJlcXMpIHsKICAgICAgY29uc3Qgb21lZ2EgPSAoMiAqIE1hdGguUEkgKiBmcmVxKSAvIHNhbXBsZVJhdGU7CiAgICAgIGNvbnN0IGNvc3cgPSBNYXRoLmNvcyhvbWVnYSk7CiAgICAgIGxldCBzMSA9IDAsIHMyID0gMDsKICAgICAgZm9yIChsZXQgbiA9IDA7IG4gPCBGUkFNRV9TSVpFOyBuKyspIHsKICAgICAgICBjb25zdCBzID0gd2luZG93ZWRbbl0gKyAyICogY29zdyAqIHMxIC0gczI7CiAgICAgICAgczIgPSBzMTsKICAgICAgICBzMSA9IHM7CiAgICAgIH0KICAgICAgY29uc3QgcG93ZXIgPSBzMSAqIHMxICsgczIgKiBzMiAtIDIgKiBjb3N3ICogczEgKiBzMjsKICAgICAgY2hyb21hW3BjXSArPSBNYXRoLnNxcnQoTWF0aC5tYXgoMCwgcG93ZXIpKTsKICAgIH0KICAgIGZyYW1lQ291bnQrKzsKICB9CgogIC8vIE5vcm1hbGl6ZSBjaHJvbWEgdG8gWzAsIDFdCiAgY29uc3QgbWF4Q2hyb21hID0gTWF0aC5tYXgoLi4uY2hyb21hKTsKICByZXR1cm4gbWF4Q2hyb21hID09PSAwCiAgICA/IEFycmF5LmZyb20oY2hyb21hKQogICAgOiBBcnJheS5mcm9tKGNocm9tYSkubWFwKHYgPT4gdiAvIG1heENocm9tYSk7Cn0KCgovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KLy8gU0NBTEUgQlVJTERFUgovLyBCdWlsZHMgdGhlIDcgbm90ZXMgb2YgYSBzY2FsZSBnaXZlbiBhIHJvb3QgYW5kIG1vZGUuCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKY29uc3QgTUFKT1JfSU5URVJWQUxTID0gWzAsIDIsIDQsIDUsIDcsIDksIDExXTsKY29uc3QgTUlOT1JfSU5URVJWQUxTID0gWzAsIDIsIDMsIDUsIDcsIDgsIDEwXTsgLy8gbmF0dXJhbCBtaW5vcgoKLyoqCiAqIEJ1aWxkcyB0aGUgc2NhbGUgbm90ZSBuYW1lcyBmb3IgYSBnaXZlbiBrZXkuCiAqIEBwYXJhbSB7bnVtYmVyfSByb290UGMgIC0gUGl0Y2ggY2xhc3MgKDAtMTEsIEMtQikKICogQHBhcmFtIHsnbWFqb3InfCdtaW5vcid9IG1vZGUKICogQHJldHVybnMge3N0cmluZ1tdfQogKi8KZnVuY3Rpb24gYnVpbGRTY2FsZShyb290UGMsIG1vZGUpIHsKICBjb25zdCBpbnRlcnZhbHMgPSBtb2RlID09PSAnbWFqb3InID8gTUFKT1JfSU5URVJWQUxTIDogTUlOT1JfSU5URVJWQUxTOwogIGNvbnN0IHVzZUZsYXRzID0gbW9kZSA9PT0gJ21pbm9yJyAmJiBGTEFUX01JTk9SX0tFWVMuaGFzKHJvb3RQYyk7CiAgY29uc3QgbmFtZXMgICAgID0gdXNlRmxhdHMgPyBOT1RFX05BTUVTX0ZMQVQgOiBOT1RFX05BTUVTOwogIHJldHVybiBpbnRlcnZhbHMubWFwKGludGVydmFsID0+IG5hbWVzWyhyb290UGMgKyBpbnRlcnZhbCkgJSAxMl0pOwp9CgoKLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIEtFWSBERVRFQ1RJT04gQ09SRQovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8qKgogKiBEZXRlY3RzIHRoZSBtdXNpY2FsIGtleSBhbmQgbW9kZSBmcm9tIGEgY2hyb21hIHZlY3Rvci4KICogQHBhcmFtIHtudW1iZXJbXX0gY2hyb21hCiAqIEByZXR1cm5zIHt7a2V5OnN0cmluZywgbW9kZTpzdHJpbmcsIHJvb3RQYzpudW1iZXIsIHNjYWxlOnN0cmluZ1tdLCBjb25maWRlbmNlOm51bWJlciwgYWxsU2NvcmVzOkFycmF5fX0KICovCmZ1bmN0aW9uIGRldGVjdEtleUZyb21DaHJvbWEoY2hyb21hKSB7CiAgY29uc3QgY2FuZGlkYXRlcyA9IFtdOwoKICBmb3IgKGxldCBwYyA9IDA7IHBjIDwgMTI7IHBjKyspIHsKICAgIC8vIE1ham9yOiBjb3JyZWxhdGUgY2hyb21hIHdpdGggS1AgbWFqb3IgcHJvZmlsZSByb3RhdGVkIHRvIHJvb3QgcGMKICAgIGNvbnN0IG1ham9yU2NvcmUgPSBwZWFyc29uKGNocm9tYSwgcm90YXRlKEtQX01BSk9SLCBwYykpOwogICAgLy8gTWlub3I6IGNvcnJlbGF0ZSBjaHJvbWEgd2l0aCBLUCBtaW5vciBwcm9maWxlIHJvdGF0ZWQgdG8gcm9vdCBwYwogICAgY29uc3QgbWlub3JTY29yZSA9IHBlYXJzb24oY2hyb21hLCByb3RhdGUoS1BfTUlOT1IsIHBjKSk7CgogICAgY2FuZGlkYXRlcy5wdXNoKHsgcGMsIG1vZGU6ICdtYWpvcicsIHNjb3JlOiBtYWpvclNjb3JlIH0pOwogICAgY2FuZGlkYXRlcy5wdXNoKHsgcGMsIG1vZGU6ICdtaW5vcicsIHNjb3JlOiBtaW5vclNjb3JlIH0pOwogIH0KCiAgLy8gU29ydCBkZXNjZW5kaW5nIGJ5IFBlYXJzb24gY29ycmVsYXRpb24KICBjYW5kaWRhdGVzLnNvcnQoKGEsIGIpID0+IGIuc2NvcmUgLSBhLnNjb3JlKTsKICBjb25zdCBiZXN0ICAgICAgPSBjYW5kaWRhdGVzWzBdOwogIGNvbnN0IHNlY29uZEJlc3QgPSBjYW5kaWRhdGVzWzFdOwoKICAvLyBOb3RlIG5hbWUgd2l0aCBjb252ZW50aW9uYWwgbm90YXRpb24KICBjb25zdCB1c2VGbGF0cyA9IGJlc3QubW9kZSA9PT0gJ21pbm9yJyAmJiBGTEFUX01JTk9SX0tFWVMuaGFzKGJlc3QucGMpOwogIGNvbnN0IG5vdGVOYW1lID0gdXNlRmxhdHMgPyBOT1RFX05BTUVTX0ZMQVRbYmVzdC5wY10gOiBOT1RFX05BTUVTW2Jlc3QucGNdOwogIGNvbnN0IHNjYWxlICAgID0gYnVpbGRTY2FsZShiZXN0LnBjLCBiZXN0Lm1vZGUpOwoKICAvLyBDb25maWRlbmNlOiBnYXAgYmV0d2VlbiBiZXN0IGFuZCBzZWNvbmQgYmVzdCwgbm9ybWFsaXplZCB0byBbMCwgMV0KICBjb25zdCBzY29yZUdhcCAgPSBiZXN0LnNjb3JlIC0gc2Vjb25kQmVzdC5zY29yZTsKICBjb25zdCBjb25maWRlbmNlID0gTWF0aC5taW4oMC45OSwgTWF0aC5tYXgoMC40MCwgc2NvcmVHYXAgKiA0KSk7CgogIHJldHVybiB7CiAgICBrZXk6ICAgICAgICBub3RlTmFtZSwKICAgIG1vZGU6ICAgICAgIGJlc3QubW9kZSwKICAgIHJvb3RQYzogICAgIGJlc3QucGMsCiAgICBzY2FsZSwKICAgIGNvbmZpZGVuY2U6IE1hdGgucm91bmQoY29uZmlkZW5jZSAqIDEwMDApIC8gMTAwMCwKICAgIGFsbFNjb3JlczogIGNhbmRpZGF0ZXMuc2xpY2UoMCwgNSkubWFwKGMgPT4gKHsKICAgICAga2V5OiAgKE5PVEVfTkFNRVNbYy5wY10pLAogICAgICBtb2RlOiBjLm1vZGUsCiAgICAgIHNjb3JlOiBNYXRoLnJvdW5kKGMuc2NvcmUgKiAxMDAwMCkgLyAxMDAwMCwKICAgIH0pKSwKICB9Owp9CgoKLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIFJPVVRFUwovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8qKgogKiBQT1NUIC9hcGkva2V5L2FuYWx5emUKICogQm9keTogeyB1cmw6IHN0cmluZyB9CiAqIFJldHVybnM6IHsga2V5LCBtb2RlLCBzY2FsZSwgY29uZmlkZW5jZSwgYWxsU2NvcmVzLCBhbmFseXplZEF0IH0KICovCmtleVJvdXRlci5wb3N0KCcvYW5hbHl6ZScsIGFzeW5jIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgdXJsIH0gPSByZXEuYm9keTsKCiAgaWYgKCF1cmwgfHwgdHlwZW9mIHVybCAhPT0gJ3N0cmluZycpIHsKICAgIHJldHVybiByZXMuc3RhdHVzKDQwMCkuanNvbih7IGVycm9yOiAnRmllbGQgInVybCIgaXMgcmVxdWlyZWQgYW5kIG11c3QgYmUgYSBzdHJpbmcuJyB9KTsKICB9CgogIHRyeSB7CiAgICBjb25zdCB7IGNoYW5uZWxEYXRhLCBzYW1wbGVSYXRlIH0gPSBhd2FpdCBmZXRjaEF1ZGlvQnVmZmVyKHVybCk7CiAgICBjb25zdCBjaHJvbWEgICAgICAgICAgICAgICAgICAgICAgID0gYnVpbGRDaHJvbWFWZWN0b3IoY2hhbm5lbERhdGEsIHNhbXBsZVJhdGUpOwogICAgY29uc3QgeyBrZXksIG1vZGUsIHNjYWxlLCBjb25maWRlbmNlLCBhbGxTY29yZXMgfSA9IGRldGVjdEtleUZyb21DaHJvbWEoY2hyb21hKTsKCiAgICByZXR1cm4gcmVzLmpzb24oewogICAgICBrZXksCiAgICAgIG1vZGUsCiAgICAgIHNjYWxlLAogICAgICBjaHJvbWFWZWN0b3I6ICAgICBjaHJvbWEubWFwKHYgPT4gTWF0aC5yb3VuZCh2ICogMTAwMCkgLyAxMDAwKSwKICAgICAgY29uZmlkZW5jZSwKICAgICAgdG9wQ2FuZGlkYXRlczogICAgYWxsU2NvcmVzLAogICAgICBhbGdvcml0aG06ICAgICAgICAnY2hyb21hLWtyZWltaGFuc2wtc2NobXVja3NsZXInLAogICAgICBhbmFseXplZEF0OiAgICAgICBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICB9KTsKICB9IGNhdGNoIChlcnIpIHsKICAgIGNvbnNvbGUuZXJyb3IoJ1tLZXlTZXJ2aWNlXSBFcnJvcjonLCBlcnIubWVzc2FnZSk7CiAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLmpzb24oeyBlcnJvcjogZXJyLm1lc3NhZ2UgfSk7CiAgfQp9KTsK
+import express from 'express';
+import { fetchAudioBuffer } from '../audio/bufferLoader.js';
+
+export const keyRouter = express.Router();
+
+// ================================================================
+// KRUMHANSL-SCHMUCKLER KEY PROFILES
+// Encodes the perceived stability of each of the 12 semitones
+// relative to a tonic for both major and minor modes.
+// Ref: Krumhansl & Kessler (1982), JEP General.
+// ================================================================
+
+const KP_MAJOR = [
+  6.35, 2.23, 3.48, 2.33, 4.38, 4.09,
+  2.52, 5.19, 2.39, 3.66, 2.29, 2.88,
+];
+
+const KP_MINOR = [
+  6.33, 2.68, 3.52, 5.38, 2.60, 3.53,
+  2.54, 4.75, 3.98, 2.69, 3.34, 3.17,
+];
+
+const NOTE_NAMES      = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+const NOTE_NAMES_FLAT = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
+
+// Keys conventionally written with flats in minor mode
+const FLAT_MINOR_KEYS = new Set([1, 3, 6, 8, 10]); // Db Eb Gb Ab Bb
+
+// ================================================================
+// HELPERS
+// ================================================================
+
+function rotate(profile, semitones) {
+  const n = profile.length;
+  return profile.map((_, i) => profile[(i + semitones) % n]);
+}
+
+function pearson(a, b) {
+  const n = a.length;
+  const meanA = a.reduce((x, y) => x + y, 0) / n;
+  const meanB = b.reduce((x, y) => x + y, 0) / n;
+  let num = 0, denA = 0, denB = 0;
+  for (let i = 0; i < n; i++) {
+    const da = a[i] - meanA;
+    const db = b[i] - meanB;
+    num  += da * db;
+    denA += da * da;
+    denB += db * db;
+  }
+  const denom = Math.sqrt(denA * denB);
+  return denom === 0 ? 0 : num / denom;
+}
+
+// ================================================================
+// CHROMA VECTOR EXTRACTION
+// Aggregates energy per pitch class (0-11) using the Goertzel
+// algorithm at exact note frequencies across 7 octaves.
+// ================================================================
+
+function buildChromaVector(channelData, sampleRate) {
+  const chroma = new Float64Array(12).fill(0);
+
+  const FRAME_SIZE = 4096;
+  const HOP_SIZE   = 2048;
+
+  // Pre-compute expected frequencies for each note across 7 octaves
+  const noteFreqs = [];
+  for (let octave = 1; octave <= 7; octave++) {
+    for (let pc = 0; pc < 12; pc++) {
+      const midi = octave * 12 + pc;
+      const freq = 440 * Math.pow(2, (midi - 69) / 12);
+      if (freq < sampleRate / 2) { // below Nyquist
+        noteFreqs.push({ pc, freq });
+      }
+    }
+  }
+
+  for (let start = 0; start + FRAME_SIZE < channelData.length; start += HOP_SIZE) {
+    const frame = channelData.subarray(start, start + FRAME_SIZE);
+
+    // Hanning window to reduce spectral leakage
+    const windowed = new Float32Array(FRAME_SIZE);
+    for (let i = 0; i < FRAME_SIZE; i++) {
+      const w = 0.5 * (1 - Math.cos((2 * Math.PI * i) / (FRAME_SIZE - 1)));
+      windowed[i] = frame[i] * w;
+    }
+
+    // Goertzel at each note frequency
+    for (const { pc, freq } of noteFreqs) {
+      const omega = (2 * Math.PI * freq) / sampleRate;
+      const cosw  = Math.cos(omega);
+      let s1 = 0, s2 = 0;
+      for (let n = 0; n < FRAME_SIZE; n++) {
+        const s = windowed[n] + 2 * cosw * s1 - s2;
+        s2 = s1;
+        s1 = s;
+      }
+      const power = s1 * s1 + s2 * s2 - 2 * cosw * s1 * s2;
+      chroma[pc] += Math.sqrt(Math.max(0, power));
+    }
+  }
+
+  const maxChroma = Math.max(...chroma);
+  return maxChroma === 0
+    ? Array.from(chroma)
+    : Array.from(chroma).map(v => v / maxChroma);
+}
+
+// ================================================================
+// SCALE BUILDER
+// ================================================================
+
+const MAJOR_INTERVALS = [0, 2, 4, 5, 7, 9, 11];
+const MINOR_INTERVALS = [0, 2, 3, 5, 7, 8, 10]; // natural minor
+
+function buildScale(rootPc, mode) {
+  const intervals = mode === 'major' ? MAJOR_INTERVALS : MINOR_INTERVALS;
+  const useFlats  = mode === 'minor' && FLAT_MINOR_KEYS.has(rootPc);
+  const names     = useFlats ? NOTE_NAMES_FLAT : NOTE_NAMES;
+  return intervals.map(interval => names[(rootPc + interval) % 12]);
+}
+
+// ================================================================
+// KEY DETECTION CORE
+// ================================================================
+
+function detectKeyFromChroma(chroma) {
+  const candidates = [];
+
+  for (let pc = 0; pc < 12; pc++) {
+    const majorScore = pearson(chroma, rotate(KP_MAJOR, pc));
+    const minorScore = pearson(chroma, rotate(KP_MINOR, pc));
+    candidates.push({ pc, mode: 'major', score: majorScore });
+    candidates.push({ pc, mode: 'minor', score: minorScore });
+  }
+
+  candidates.sort((a, b) => b.score - a.score);
+  const best       = candidates[0];
+  const secondBest = candidates[1];
+
+  const useFlats = best.mode === 'minor' && FLAT_MINOR_KEYS.has(best.pc);
+  const noteName = useFlats ? NOTE_NAMES_FLAT[best.pc] : NOTE_NAMES[best.pc];
+  const scale    = buildScale(best.pc, best.mode);
+
+  const scoreGap   = best.score - secondBest.score;
+  const confidence = Math.min(0.99, Math.max(0.40, scoreGap * 4));
+
+  return {
+    key:         noteName,
+    mode:        best.mode,
+    rootPc:      best.pc,
+    scale,
+    confidence:  Math.round(confidence * 1000) / 1000,
+    allScores:   candidates.slice(0, 5).map(c => ({
+      key:   (NOTE_NAMES[c.pc]),
+      mode:  c.mode,
+      score: Math.round(c.score * 10000) / 10000,
+    })),
+  };
+}
+
+// ================================================================
+// ROUTES
+// ================================================================
+
+/**
+ * POST /api/key/analyze
+ * Body: { url: string }
+ * Returns: { key, mode, scale, confidence, allScores, analyzedAt }
+ */
+keyRouter.post('/analyze', async (req, res) => {
+  const { url } = req.body;
+
+  if (!url || typeof url !== 'string') {
+    return res.status(400).json({ error: 'Field "url" is required and must be a string.' });
+  }
+
+  try {
+    const { channelData, sampleRate } = await fetchAudioBuffer(url);
+    const chroma                       = buildChromaVector(channelData, sampleRate);
+    const { key, mode, scale, confidence, allScores } = detectKeyFromChroma(chroma);
+
+    return res.json({
+      key,
+      mode,
+      scale,
+      chromaVector:   chroma.map(v => Math.round(v * 1000) / 1000),
+      confidence,
+      topCandidates:  allScores,
+      algorithm:      'chroma-krumhansl-schmuckler',
+      analyzedAt:     new Date().toISOString(),
+    });
+  } catch (err) {
+    console.error('[KeyService] Error:', err.message);
+    return res.status(500).json({ error: err.message });
+  }
+});
