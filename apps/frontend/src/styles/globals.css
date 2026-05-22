@@ -1,0 +1,58 @@
+/* ================================================
+  Music Analyzer - Design System
+  Paleta Ableton: Grises intensos, Azul Real, Morados
+================================================*/
+
+:root {
+  /* Primary Backgrounds */
+  --color-bg-deep:       #121216;
+  --color-bg-base:      #1a1a20;
+  --color-bg-panel:     #22222a;
+  --color-bg-raised:    #2a2a34;
+  --color-bg-hover:     #333340;
+
+  /* Azul Real (Accent principal) */
+  --color-accent:        #4469FF;
+  --color-accent-light:  #668aFF;
+  --color-accent-dark:   #2244DD;
+
+  /* Morado (Certeza/Ego brand) */
+  --color-purple:        #7B61FF;
+  --color-purple-light:  #9D85FF;
+  --color-purple-dark:   #4422CC;
+
+  /* Text */
+  --color-text-primary:  #E8E8F0;
+  --color-text-second:   #A0A0B8;
+  --color-text-muted:    #606078;
+
+  /* BPM / Key highlights */
+  --color-bpm:           #FF6B35;
+  --color-key:           #00E5A0;
+
+  /* Borders */
+  --border-subtle:       1px solid rgba(255,255,255,0.06);
+  --border-mid:          1px solid rgba(255,255,255,0.12);
+
+  /* Typography */
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+/* Scrollbar (Ableton-style) */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-hover);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
