@@ -1,13 +1,10 @@
 import express from 'express';
-import { fetchAudioBuffer } from '../audio/bufferLoader.js';
+import { fetchAudioBuffer } from '../../audio/bufferLoader.js';
 
 export const keyRouter = express.Router();
 
 // ================================================================
 // KRUMHANSL-SCHMUCKLER KEY PROFILES
-// Encodes the perceived stability of each of the 12 semitones
-// relative to a tonic for both major and minor modes.
-// Ref: Krumhansl & Kessler (1982), JEP General.
 // ================================================================
 
 const KP_MAJOR = [
@@ -22,9 +19,7 @@ const KP_MINOR = [
 
 const NOTE_NAMES      = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 const NOTE_NAMES_FLAT = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
-
-// Keys conventionally written with flats in minor mode
-const FLAT_MINOR_KEYS = new Set([1, 3, 6, 8, 10]); // Db Eb Gb Ab Bb
+const FLAT_MINOR_KEYS = new Set([1, 3, 6, 8, 10]);
 
 // ================================================================
 // HELPERS
@@ -52,9 +47,7 @@ function pearson(a, b) {
 }
 
 // ================================================================
-// CHROMA VECTOR EXTRACTION
-// Aggregates energy per pitch class (0-11) using the Goertzel
-// algorithm at exact note frequencies across 7 octaves.
+// CHROMA VECTOR EXTRACTION (Goertzel algorithm)
 // ================================================================
 
 function buildChromaVector(channelData, sampleRate) {
@@ -63,13 +56,12 @@ function buildChromaVector(channelData, sampleRate) {
   const FRAME_SIZE = 4096;
   const HOP_SIZE   = 2048;
 
-  // Pre-compute expected frequencies for each note across 7 octaves
   const noteFreqs = [];
   for (let octave = 1; octave <= 7; octave++) {
     for (let pc = 0; pc < 12; pc++) {
       const midi = octave * 12 + pc;
       const freq = 440 * Math.pow(2, (midi - 69) / 12);
-      if (freq < sampleRate / 2) { // below Nyquist
+      if (freq < sampleRate / 2) {
         noteFreqs.push({ pc, freq });
       }
     }
@@ -78,14 +70,12 @@ function buildChromaVector(channelData, sampleRate) {
   for (let start = 0; start + FRAME_SIZE < channelData.length; start += HOP_SIZE) {
     const frame = channelData.subarray(start, start + FRAME_SIZE);
 
-    // Hanning window to reduce spectral leakage
     const windowed = new Float32Array(FRAME_SIZE);
     for (let i = 0; i < FRAME_SIZE; i++) {
       const w = 0.5 * (1 - Math.cos((2 * Math.PI * i) / (FRAME_SIZE - 1)));
       windowed[i] = frame[i] * w;
     }
 
-    // Goertzel at each note frequency
     for (const { pc, freq } of noteFreqs) {
       const omega = (2 * Math.PI * freq) / sampleRate;
       const cosw  = Math.cos(omega);
@@ -111,7 +101,7 @@ function buildChromaVector(channelData, sampleRate) {
 // ================================================================
 
 const MAJOR_INTERVALS = [0, 2, 4, 5, 7, 9, 11];
-const MINOR_INTERVALS = [0, 2, 3, 5, 7, 8, 10]; // natural minor
+const MINOR_INTERVALS = [0, 2, 3, 5, 7, 8, 10];
 
 function buildScale(rootPc, mode) {
   const intervals = mode === 'major' ? MAJOR_INTERVALS : MINOR_INTERVALS;
@@ -138,21 +128,21 @@ function detectKeyFromChroma(chroma) {
   const best       = candidates[0];
   const secondBest = candidates[1];
 
-  const useFlats = best.mode === 'minor' && FLAT_MINOR_KEYS.has(best.pc);
-  const noteName = useFlats ? NOTE_NAMES_FLAT[best.pc] : NOTE_NAMES[best.pc];
-  const scale    = buildScale(best.pc, best.mode);
+  const useFlats  = best.mode === 'minor' && FLAT_MINOR_KEYS.has(best.pc);
+  const noteName  = useFlats ? NOTE_NAMES_FLAT[best.pc] : NOTE_NAMES[best.pc];
+  const scale     = buildScale(best.pc, best.mode);
 
   const scoreGap   = best.score - secondBest.score;
   const confidence = Math.min(0.99, Math.max(0.40, scoreGap * 4));
 
   return {
-    key:         noteName,
-    mode:        best.mode,
-    rootPc:      best.pc,
+    key:        noteName,
+    mode:       best.mode,
+    rootPc:     best.pc,
     scale,
-    confidence:  Math.round(confidence * 1000) / 1000,
-    allScores:   candidates.slice(0, 5).map(c => ({
-      key:   (NOTE_NAMES[c.pc]),
+    confidence: Math.round(confidence * 1000) / 1000,
+    allScores:  candidates.slice(0, 5).map(c => ({
+      key:   NOTE_NAMES[c.pc],
       mode:  c.mode,
       score: Math.round(c.score * 10000) / 10000,
     })),
@@ -184,11 +174,11 @@ keyRouter.post('/analyze', async (req, res) => {
       key,
       mode,
       scale,
-      chromaVector:   chroma.map(v => Math.round(v * 1000) / 1000),
+      chromaVector:  chroma.map(v => Math.round(v * 1000) / 1000),
       confidence,
-      topCandidates:  allScores,
-      algorithm:      'chroma-krumhansl-schmuckler',
-      analyzedAt:     new Date().toISOString(),
+      topCandidates: allScores,
+      algorithm:     'chroma-krumhansl-schmuckler',
+      analyzedAt:    new Date().toISOString(),
     });
   } catch (err) {
     console.error('[KeyService] Error:', err.message);
