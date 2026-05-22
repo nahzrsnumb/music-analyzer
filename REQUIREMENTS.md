@@ -1,0 +1,77 @@
+# 🌕 Music Analyzer — Requerimientos de Dise�o y Precisión
+
+> Este documento es el contrato permanente de arquitectura. Toda decisión de código debe respetar las reglas aquí definidas.
+
+---
+
+## 0. Visión y Objetivo
+
+Aplicación de producción musical conectada a internet que:
+- Analiza canciones para extraer **BPM**, **escala musical** y **estructura rítmica/arreglo**
+- Proporciona una interfaz sofisticada estilo Ableton Live
+- Ofrece un agente de IA por pista (burbuja estilo iPhone)
+
+---
+
+## 1. Stack Tecnológico (NO cambiar sin justificación)
+
+| Capa | Tecnología | Razón |
+|----|----|----|
+| Backend | Node.js (ESM) + Express 4 | Ligero, asíncrono, ideal para I/O audio |
+| Análisis BPM | Web Audio API + libraria de onset-detection | Standard de industria |
+| Análisis clave | Chroma vectors / Essentia.js | Precisión tonal demostrada |
+| Frontend | React 18 z Vite | Rapidez de desarrollo y ecosistema |
+| Estado global | React Context API | Suficiente para esta escala |
+| Estilos | CSS Variables + modulos CSS | Paleta Ableton consistente |
+| Waveform | Wavesurfer.js | De mejor calidad visual en el ecosistema JS |
+
+---
+
+## 2. Paleta De Colores (INMUTABLE)
+
+```css
+/* TODOS; los colores se definen en globals.css como variables CSS */
+--color-bg-deep:        #121216;  /* Fondo profundo */
+--color-accent:         #4469FF;  /* Azul Real */
+--color-purple:         #7B61FF;  /* Morado (IA agent) */
+--color-bpm:            #FF6B35;  /* Naranja BPM highlight */
+--color-key:            #00E5A0;  /* Turquesa Clave highlight */
+```
+
+---
+
+## 3. Reglas de Arquitectura
+
+- **Monorepo:** Todo el código vive en `apps/backend` y `apps/frontend`
+- **API REST:** El backend expone endpoints JSON strictos sin respuestas parciales
+- **Separación de concern:** Lógica de análisis solo en `src/services/` y `src/audio/`
+- **TypeSafety:** Frontend 80%+ typed con TypeScript; no `any` explícitos
+- **Error boundaries:** Todos los endpoints con `try/catch` y respuestas de error estructuradas
+- **Colores vía CSS vars:** NUNCA hardcodear hex en componentes; usar tokens
+
+---
+
+## 4. Reglas de Precisión Analítica
+
+- El BPM se reporta con `confidence` (0-1) y `algorithm`
+- La escala musical incluye `key`, `mode` (mayor/menor) y `scale` (7 notas)
+- Las secciones incluyen `start` y `end` en beats, no en segundos raw
+- No se muestran resultados al usuario sin indicades de confianza
+
+---
+
+## 5. Convenciones de Código
+
+- `camelCase` para funciones y variables
+- `PascalCase` para componentes React y interfaces TS
+- `SCREAMING_SNAKE` para constantes
+- Commits seguían [Conventional Commits](https://www.conventionalcommits.org/): `feat:`, `fix:`, `docs:`, `style:`, `refactor:`
+
+---
+
+## 6. Reglas de UX
+
+- El `ChatAgent` (Certeza/Ego) siempre conoce el contexto musical de la pista activa
+- Los valores de BPM y Clave tienen destacado chromatic (naranja y turquesa)
+- El `TrackGrid` soporta zoom horizontal de 0.5x a 4x
+- No hay loading states genericos; cada operación tiene su propio feedback visual
