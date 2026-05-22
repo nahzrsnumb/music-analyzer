@@ -1,5 +1,5 @@
 import express from 'express';
-import { fetchAudioBuffer } from '../../audio/bufferLoader.js';
+import { fetchAudioBuffer } from '../audio/bufferLoader.js';
 
 export const keyRouter = express.Router();
 
@@ -153,11 +153,6 @@ function detectKeyFromChroma(chroma) {
 // ROUTES
 // ================================================================
 
-/**
- * POST /api/key/analyze
- * Body: { url: string }
- * Returns: { key, mode, scale, confidence, allScores, analyzedAt }
- */
 keyRouter.post('/analyze', async (req, res) => {
   const { url } = req.body;
 
