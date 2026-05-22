@@ -1,5 +1,5 @@
 import express from 'express';
-import { fetchAudioBuffer } from '../../audio/bufferLoader.js';
+import { fetchAudioBuffer } from '../audio/bufferLoader.js';
 
 export const bpmRouter = express.Router();
 
@@ -14,17 +14,10 @@ const MAX_HISTORY = 100;
 // ALGORITHM 1: PEAK DETECTION (Onset-based)
 // ================================================================
 
-/**
- * Calculates BPM using energy peak detection.
- * @param {Float32Array} channelData  - mono PCM
- * @param {number} sampleRate        - Hz (e.g. 44100)
- * @returns {{bpm:number, confidence:number}}
- */
 function detectBpmPeaks(channelData, sampleRate) {
-  const WINDOW_SIZE = Math.floor(sampleRate * 0.02); // 20ms windows
+  const WINDOW_SIZE = Math.floor(sampleRate * 0.02);
   const HOP_SIZE    = Math.floor(WINDOW_SIZE / 2);
 
-  // Step 1: compute RMS energy per window
   const energy = [];
   for (let i = 0; i + WINDOW_SIZE < channelData.length; i += HOP_SIZE) {
     let sum = 0;
@@ -34,15 +27,13 @@ function detectBpmPeaks(channelData, sampleRate) {
     energy.push(Math.sqrt(sum / WINDOW_SIZE));
   }
 
-  // Step 2: smooth energy with a 5-frame moving average
   const smoothed = energy.map((_, i, arr) => {
     const win = arr.slice(Math.max(0, i - 2), i + 3);
     return win.reduce((a, b) => a + b, 0) / win.length;
   });
 
-  // Step 3: detect peaks (local maxima above threshold)
-  const meanE   = smoothed.reduce((a, b) => a + b, 0) / smoothed.length;
-  const thresh  = meanE * 1.3;
+  const meanE  = smoothed.reduce((a, b) => a + b, 0) / smoothed.length;
+  const thresh = meanE * 1.3;
   const peakIndices = [];
   for (let i = 2; i < smoothed.length - 2; i++) {
     if (smoothed[i] > thresh &&
@@ -58,7 +49,6 @@ function detectBpmPeaks(channelData, sampleRate) {
     return detectBpmAutocorrelation(channelData, sampleRate);
   }
 
-  // Step 4: calculate median interval between peaks
   const intervals = [];
   for (let i = 1; i < peakIndices.length; i++) {
     intervals.push(peakIndices[i] - peakIndices[i - 1]);
@@ -69,7 +59,6 @@ function detectBpmPeaks(channelData, sampleRate) {
   const intervalSeconds = (medianInterval * HOP_SIZE) / sampleRate;
   const rawBpm = 60 / intervalSeconds;
 
-  // Octave folding: normalize into [60, 180] BPM range
   let bpm = rawBpm;
   while (bpm > 180) bpm /= 2;
   while (bpm < 60)  bpm *= 2;
@@ -86,12 +75,6 @@ function detectBpmPeaks(channelData, sampleRate) {
 // ALGORITHM 2: AUTOCORRELATION (fallback for sparse signals)
 // ================================================================
 
-/**
- * Autocorrelation-based BPM detection.
- * @param {Float32Array} channelData
- * @param {number} sampleRate
- * @returns {{bpm:number, confidence:number}}
- */
 function detectBpmAutocorrelation(channelData, sampleRate) {
   const analysisDuration = Math.min(30 * sampleRate, channelData.length);
   const startOffset      = Math.floor(
@@ -105,11 +88,11 @@ function detectBpmAutocorrelation(channelData, sampleRate) {
     ds.push(Math.abs(slice[i]));
   }
 
-  const lagMin = Math.floor(60000 / 180); // 333ms
-  const lagMax = Math.floor(60000 / 60);  // 1000ms
+  const lagMin = Math.floor(60000 / 180);
+  const lagMax = Math.floor(60000 / 60);
 
-  let bestLag    = lagMin;
-  let bestScore  = -Infinity;
+  let bestLag   = lagMin;
+  let bestScore = -Infinity;
   for (let lag = lagMin; lag <= lagMax && lag < ds.length; lag++) {
     let score = 0;
     const n   = ds.length - lag;
@@ -133,11 +116,6 @@ function detectBpmAutocorrelation(channelData, sampleRate) {
 // ROUTES
 // ================================================================
 
-/**
- * POST /api/bpm/analyze
- * Body: { url: string }   (public audio URL: mp3/wav/ogg)
- * Returns: { id, url, bpm, confidence, algorithm, analyzedAt }
- */
 bpmRouter.post('/analyze', async (req, res) => {
   const { url } = req.body;
 
@@ -150,12 +128,12 @@ bpmRouter.post('/analyze', async (req, res) => {
     const { bpm, confidence } = detectBpmPeaks(channelData, sampleRate);
 
     const result = {
-      id:          `${Date.now()}-${Math.random().toString(36).substr(2, 6)}`,
+      id:         `${Date.now()}-${Math.random().toString(36).substr(2, 6)}`,
       url,
       bpm,
       confidence,
-      algorithm:   confidence >= 0.8 ? 'peak-detection' : 'autocorrelation',
-      analyzedAt:  new Date().toISOString(),
+      algorithm:  confidence >= 0.8 ? 'peak-detection' : 'autocorrelation',
+      analyzedAt: new Date().toISOString(),
     };
 
     analysisHistory.unshift(result);
@@ -168,10 +146,6 @@ bpmRouter.post('/analyze', async (req, res) => {
   }
 });
 
-/**
- * GET /api/bpm/history?limit=20
- * Returns the most recent BPM analysis results
- */
 bpmRouter.get('/history', (req, res) => {
   const limit = Math.min(Number(req.query.limit) || 20, MAX_HISTORY);
   return res.json({
