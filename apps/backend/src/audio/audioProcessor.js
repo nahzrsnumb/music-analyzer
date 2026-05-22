@@ -1,1 +1,206 @@
-aW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcyc7CmltcG9ydCB7IGZldGNoQXVkaW9CdWZmZXIgfSBmcm9tICcuL2J1ZmZlckxvYWRlci5qcyc7CgpleHBvcnQgY29uc3QgYXVkaW9Sb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpOwoKLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIFdBVkVGT1JNIEVYVFJBQ1RJT04KLy8gUmVkdWNlcyB0aGUgZnVsbCBQQ00gYnVmZmVyIHRvIGEgbWFuYWdlYWJsZSBhcnJheSBvZiBwZWFrIHZhbHVlcwovLyBzdWl0YWJsZSBmb3IgV2F2ZXN1cmZlci5qcyByZW5kZXJpbmcuCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKLyoqCiAqIERvd25zYW1wbGVzIGEgUENNIGJ1ZmZlciB0byBhIGZpeGVkIG51bWJlciBvZiBhbXBsaXR1ZGUgcGVha3MuCiAqIEVhY2ggYmluIGhvbGRzIHRoZSBtYXhpbXVtIGFic29sdXRlIHNhbXBsZSB2YWx1ZSB3aXRoaW4gdGhhdCByYW5nZQogKiAtLSB3aGljaCBpcyBleGFjdGx5IHdoYXQgV2F2ZXN1cmZlci5qcyBleHBlY3RzIGluIGl0cyBgcGVha3NgIGZvcm1hdC4KICoKICogQHBhcmFtIHtGbG9hdDMyQXJyYXl9IGNoYW5uZWxEYXRhCiAqIEBwYXJhbSB7bnVtYmVyfSB0YXJnZXRTYW1wbGVzICAtIG51bWJlciBvZiBvdXRwdXQgcG9pbnRzIChkZWZhdWx0IDE0NDApCiAqIEByZXR1cm5zIHtudW1iZXJbXX0KICovCmZ1bmN0aW9uIGV4dHJhY3RXYXZlZm9ybVBlYWtzKGNoYW5uZWxEYXRhLCB0YXJnZXRTYW1wbGVzID0gMTQ0MCkgewogIGNvbnN0IHRvdGFsICAgPSBjaGFubmVsRGF0YS5sZW5ndGg7CiAgY29uc3QgYmluU2l6ZSA9IE1hdGguZmxvb3IodG90YWwgLyB0YXJnZXRTYW1wbGVzKTsKICBjb25zdCBwZWFrcyAgID0gbmV3IEFycmF5KHRhcmdldFNhbXBsZXMpOwoKICBmb3IgKGxldCBpID0gMDsgaSA8IHRhcmdldFNhbXBsZXM7IGkrKykgewogICAgbGV0IG1heEFtcCA9IDA7CiAgICBjb25zdCBzdGFydCA9IGkgKiBiaW5TaXplOwogICAgY29uc3QgZW5kICAgPSBNYXRoLm1pbihzdGFydCArIGJpblNpemUsIHRvdGFsKTsKICAgIGZvciAobGV0IGogPSBzdGFydDsgaiA8IGVuZDsgaisrKSB7CiAgICAgIGNvbnN0IGFicyA9IE1hdGguYWJzKGNoYW5uZWxEYXRhW2pdKTsKICAgICAgaWYgKGFicyA+IG1heEFtcCkgbWF4QW1wID0gYWJzOwogICAgfQogICAgcGVha3NbaV0gPSBNYXRoLnJvdW5kKG1heEFtcCAqIDEwMDAwKSAvIDEwMDAwOwogIH0KCiAgcmV0dXJuIHBlYWtzOwp9CgoKLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIFNFQ1RJT04gU0VHTUVOQVRJT04gKEVORVJHWS1CQVNFRCB7ItbSBTTUkpCi8vCi8vIEFsZ29yaXRobToKLy8gIDEuIENvbXB1dGUgUk1TIGVuZXJneSBwZXIgZnJhbWUgKH4yIHNlY29uZHMpIG92ZXIgdGhlIGZ1bGwgdHJhY2suCi8vICAyLiBTbW9vdGggd2l0aCBhIG1vdmluZy1hdmVyYWdlIGtlcm5lbCB0byBlbGltaW5hdGUgdHJhbnNpZW50cy4KLy8gIDMuIERldGVjdCBzaWduaWZpY2FudCBlbmVyZ3kgY2hhbmdlcyAoZGVyaXZhdGl2ZSB0aHJlc2hvbGQpLgovLyAgNC4gQ2x1c3RlciBjaGFuZ2Vwb2ludHMgaW50byBtZWFuaW5nZnVsIHNlY3Rpb25zIGFuZCBhc3NpZ24KLy8gICAgIHNlbWFudGljIGxhYmVscyBiYXNlZCBvbiBwb3NpdGlvbiBhbmQgcmVsYXRpdmUgZW5lcmd5IGxldmVsLgovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8qKgogKiBDb21wdXRlcyBSTVMgZW5lcmd5IHBlciBmcmFtZS4KICogQHBhcmFtIHtGbG9hdDMyQXJyYXl9IGRhdGEKICogQHBhcmFtIHtudW1iZXJ9IGZyYW1lU2l6ZQogKiBAcmV0dXJucyB7bnVtYmVyW119CiAqLwpmdW5jdGlvbiBjb21wdXRlUm1zRW5lcmd5KGRhdGEsIGZyYW1lU2l6ZSkgewogIGNvbnN0IG51bUZyYW1lcyA9IE1hdGguZmxvb3IoZGF0YS5sZW5ndGggLyBmcmFtZVNpemUpOwogIGNvbnN0IHJtcyAgICAgICA9IG5ldyBBcnJheShudW1GcmFtZXMpOwogIGZvciAobGV0IGkgPSAwOyBpIDwgbnVtRnJhbWVzOyBpKyspIHsKICAgIGxldCBzdW0gPSAwOwogICAgY29uc3Qgb2Zmc2V0ID0gaSAqIGZyYW1lU2l6ZTsKICAgIGZvciAobGV0IGogPSAwOyBqIDwgZnJhbWVTaXplOyBqKyspIHsKICAgICAgc3VtICs9IGRhdGFbb2Zmc2V0ICsgal0gKiogMjsKICAgIH0KICAgIHJtc1tpXSA9IE1hdGguc3FydChzdW0gLyBmcmFtZVNpemUpOwogIH0KICByZXR1cm4gcm1zOwp9CgovKioKICogQXBwbGllcyBhIG1vdmluZy1hdmVyYWdlIHNtb290aGluZyBrZXJuZWwuCiAqIEBwYXJhbSB7bnVtYmVyW119IHNlcmllcwogKiBAcGFyYW0ge251bWJlcn0gcmFkaXVzCiAqIEByZXR1cm5zIHtudW1iZXJbXX0KICovCmZ1bmN0aW9uIHNtb290aChzZXJpZXMsIHJhZGl1cykgewogIHJldHVybiBzZXJpZXMubWFwKChfLCBpLCBhcnIpID0+IHsKICAgIGNvbnN0IHdpbiA9IGFyci5zbGljZShNYXRoLm1heCgwLCBpIC0gcmFkaXVzKSwgaSArIHJhZGl1cyArIDEpOwogICAgcmV0dXJuIHdpbi5yZWR1Y2UoKGEsIGIpID0+IGEgKyBiLCAwKSAvIHdpbi5sZW5ndGg7CiAgfSk7Cn0KCi8qKgogKiBJZGVudGlmaWVzIHNlY3Rpb24gY2hhbmdlcHBvaW50cyBiYXNlZCBvbiBlbmVyZ3kgZGVyaXZhdGl2ZSBleGNlZWRpbmcgYSB0aHJlc2hvbGQuCiAqIEBwYXJhbSB7bnVtYmVyW119IHNtb290aGVkUm1zCiAqIEBwYXJhbSB7bnVtYmVyfSBtaW5HYXAgICAgICAgICAtIG1pbmltdW0gZnJhbWVzIGJldHdlZW4gY2hhbmdlcG9pbnRzCiAqIEByZXR1cm5zIHtudW1iZXJbXX0gICAgICAgICAgICAgZnJhbWUgaW5kaWNlcyBvZiBzZWN0aW9uIGJvdW5kYXJpZXMKICovCmZ1bmN0aW9uIGZpbmRDaGFuZ2Vwb2ludHMoc21vb3RoZWRSbXMsIG1pbkdhcCkgewogIGNvbnN0IG4gICAgICAgICAgICA9IHNtb290aGVkUm1zLmxlbmd0aDsKICBjb25zdCBkZXJpdmF0aXZlICAgPSBzbW9vdGhlZFJtcy5tYXAoKHYsIGkpID0+CiAgICBpID09PSAwID8gMCA6IE1hdGguYWJzKHYgLSBzbW9vdGhlZFJtc1tpIC0gMV0pCiAgKTsKICBjb25zdCBtYXhEZXJpdmF0aXZlID0gTWF0aC5tYXgoLi4uZGVyaXZhdGl2ZSk7CiAgY29uc3QgdGhyZXNoICAgICAgICA9IG1heERlcml2YXRpdmUgKiAwLjI1OyAvLyB0b3AgMjUlIG9mIHZhcmlhdGlvbiBpcyBhIGNoYW5nZXBvaW50CgogIGNvbnN0IGNoYW5nZXBvaW50cyA9IFswXTsgLy8gYWx3YXlzIHN0YXJ0IGF0IDAKICBsZXQgbGFzdCA9IDA7CiAgZm9yIChsZXQgaSA9IDE7IGkgPCBuOyBpKyspIHsKICAgIGlmIChkZXJpdmF0aXZlW2ldID49IHRocmVzaCAmJiAoaSAtIGxhc3QpID49IG1pbkdhcCkgewogICAgICBjaGFuZ2Vwb2ludHMucHVzaChpKTsKICAgICAgbGFzdCA9IGk7CiAgICB9CiAgfQogIGNoYW5nZXBvaW50cy5wdXNoKG4gLSAxKTsgLy8gYWx3YXlzIGVuZCBhdCBsYXN0IGZyYW1lCiAgcmV0dXJuIGNoYW5nZXBvaW50czsKfQoKLyoqCiAqIEFzc2lnbnMgc2VtYW50aWMgbGFiZWxzIHRvIHNlY3Rpb25zIGJhc2VkIG9uIHBvc2l0aW9uIGFuZCBSTVMgZW5lcmd5LgogKiBSdWxlczoKICogIC0gRmlyc3Qgc2VnbWVudCA8IDEwJSBkdXJhdGlvbiAtPiBJbnRybwogKiAgLSBMYXN0IHNlZ21lbnQgPCAxMCUgZHVyYXRpb24gIC0+IE91dHJvCiAqICAtIEhpZ2ggZW5lcmd5IHNlZ21lbnRzICh+IDMzJSBvZiB0cmFjaykgLT4gQ2hvcnVzCiAqICAtIE1lZGl1bSBlbmVyZ3kgICAgICAgICAgICAgICAgICAgICAgICAgIC0+IFZlcnNlCiAqICAtIExvdyBlbmVyZ3kgc2VnbWVudHMgICAgICAgICAgICAgICAgICAgIC0+IEJyaWRnZQogKgogKiBAcGFyYW0ge251bWJlcltdfSBjaGFuZ2Vwb2ludHMKICogQHBhcmFtIHtudW1iZXJbXX0gc21vb3RoZWRSbXMKICogQHBhcmFtIHtudW1iZXJ9ICAgdG90YWxGcmFtZXMKICogQHJldHVybnMge0FycmF5PHt0eXBlOnN0cmluZywgc3RhcnRGcmFtZTpudW1iZXIsIGVuZEZyYW1lOm51bWJlciwgZW5lcmd5Om51bWJlcn0+fQogKi8KZnVuY3Rpb24gbGFiZWxTZWN0aW9ucyhjaGFuZ2Vwb2ludHMsIHNtb290aGVkUm1zLCB0b3RhbEZyYW1lcykgewogIGNvbnN0IHNlZ21lbnRzID0gW107CiAgZm9yIChsZXQgaSA9IDA7IGkgPCBjaGFuZ2Vwb2ludHMubGVuZ3RoIC0gMTsgaSsrKSB7CiAgICBjb25zdCBzdGFydEYgPSBjaGFuZ2Vwb2ludHNbaV07CiAgICBjb25zdCBlbmRGICAgPSBjaGFuZ2Vwb2ludHNbaSArIDFdOwogICAgY29uc3Qgc2xpY2UgID0gc21vb3RoZWRSbXMuc2xpY2Uoc3RhcnRGLCBlbmRGKTsKICAgIGNvbnN0IG1lYW5FICA9IHNsaWNlLnJlZHVjZSgoYSwgYikgPT4gYSArIGIsIDApIC8gc2xpY2UubGVuZ3RoOwogICAgc2VnbWVudHMucHVzaCh7IHN0YXJ0RiwgZW5kRiwgZW5lcmd5OiBtZWFuRSwgbGVuZ3RoOiBlbmRGIC0gc3RhcnRGIH0pOwogIH0KCiAgaWYgKHNlZ21lbnRzLmxlbmd0aCA9PT0gMCkgcmV0dXJuIFtdOwoKICBjb25zdCBtYXhFbmVyZ3kgICA9IE1hdGgubWF4KC4uLnNlZ21lbnRzLm1hcChzID0+IHMuZW5lcmd5KSk7CiAgY29uc3QgdG90YWxMZW5ndGggPSB0b3RhbEZyYW1lczsKCiAgLy8gQ291bnQgaG93IG1hbnkgdGltZXMgZWFjaCBsYWJlbCBoYXMgYmVlbiB1c2VkIChmb3Igc3VmZml4aW5nKQogIGNvbnN0IGxhYmVsQ291bnRlciA9IHt9OwoKICByZXR1cm4gc2VnbWVudHMubWFwKChzZWcpID0+IHsKICAgIGNvbnN0IHBvc0luVHJhY2sgPSBzZWcuc3RhcnRGIC8gdG90YWxMZW5ndGg7CiAgICBjb25zdCBlbmRQb3MgICAgID0gc2VnLmVuZEYgICAvIHRvdGFsTGVuZ3RoOwogICAgY29uc3QgcmVsRW5lcmd5ICA9IG1heEVuZXJneSA+IDAgPyBzZWcuZW5lcmd5IC8gbWF4RW5lcmd5IDogMDsKCiAgICBsZXQgdHlwZTsKICAgIGlmIChwb3NJblRyYWNrIDwgMC4wOCAmJiBzZWcubGVuZ3RoIC8gdG90YWxMZW5ndGggPCAwLjE1KSB7CiAgICAgIHR5cGUgPSAnaW50cm8nOwogICAgfSBlbHNlIGlmIChlbmRQb3MgPiAwLjkyICYmIHNlZy5sZW5ndGggLyB0b3RhbExlbmd0aCA8IDAuMTUpIHsKICAgICAgdHlwZSA9ICdvdXRybyc7CiAgICB9IGVsc2UgaWYgKHJlbEVuZXJneSA+IDAuNzUpIHsKICAgICAgdHlwZSA9ICdjaG9ydXMnOwogICAgfSBlbHNlIGlmIChyZWxFbmVyZ3kgPiAwLjQwKSB7CiAgICAgIHR5cGUgPSAndmVyc2UnOwogICAgfSBlbHNlIHsKICAgICAgdHlwZSA9ICdicmlkZ2UnOwogICAgfQoKICAgIC8vIFN1ZmZpeCByZXBlYXRlZCBsYWJlbHMgKHZlcnNlIDEsIHZlcnNlIDIsIGV0Yy4pCiAgICBsYWJlbENvdW50ZXJbdHlwZV0gPSAobGFiZWxDb3VudGVyW3R5cGVdIHx8IDApICsgMTsKICAgIGNvbnN0IGxhYmVsID0gbGFiZWxDb3VudGVyW3R5cGVdID4gMSA/IGB7dHlwZX0gJHtsYWJlbENvdW50ZXJbdHlwZV19YCA6IHR5cGU7CgogICAgcmV0dXJuIHsgdHlwZTogbGFiZWwsIHN0YXJ0RnJhbWU6IHNlZy5zdGFydEYsIGVuZEZyYW1lOiBzZWcuZW5kRiwgZW5lcmd5OiBNYXRoLnJvdW5kKHNlZy5lbmVyZ3kgKiAxMDAwMCkgLyAxMDAwMCB9OwogIH0pOwp9CgoKLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIFJPVVRFUwovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCi8qKgogKiBQT1NUIC9hcGkvYXVkaW8vc3RydWN0dXJlCiAqIEJvZHk6IHsgdXJsOiBzdHJpbmcgfQogKiBSZXR1cm5zOiB7IHNlY3Rpb25zLCBkdXJhdGlvbiwgdGltZVNpZ25hdHVyZSwgZnJhbWVEdXJhdGlvblNlYywgYW5hbHl6ZWRBdCB9CiAqLwphdWRpb1JvdXRlci5wb3N0KCcvc3RydWN0dXJlJywgYXN5bmMgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgeyB1cmwgfSA9IHJlcS5ib2R5OwoKICBpZiAoIXVybCB8fCB0eXBlb2YgdXJsICE9PSAnc3RyaW5nJykgewogICAgcmV0dXJuIHJlcy5zdGF0dXMoNDAwKS5qc29uKHsgZXJyb3I6ICdGaWVsZCAidXJsIiBpcyByZXF1aXJlZCBhbmQgbXVzdCBiZSBhIHN0cmluZy4nIH0pOwogIH0KCiAgdHJ5IHsKICAgIGNvbnN0IHsgY2hhbm5lbERhdGEsIHNhbXBsZVJhdGUsIGR1cmF0aW9uIH0gPSBhd2FpdCBmZXRjaEF1ZGlvQnVmZmVyKHVybCk7CgogICAgLy8gMiBzZWNvbmQgZnJhbWVzIGZvciBzZWN0aW9uIGFuYWx5c2lzCiAgICBjb25zdCBGUkFNRV9EVVJBQ0lPTl9TRUMgPSAyOwogICAgY29uc3QgZnJhbWVTaXplICAgICAgICAgID0gTWF0aC5mbG9vcihzYW1wbGVSYXRlICogRlJBTUVfRFVSQUNJT05fU0VDKTsKCiAgICAvLyBNaW5pbXVtIDggZnJhbWVzICgxNnMpIGJldHdlZW4gc2VjdGlvbnMgdG8gYXZvaWQgZnJhZ21lbnRhdGlvbgogICAgY29uc3QgTUlOX0dBUF9GUkFNRVMgPSA4OwoKICAgIGNvbnN0IHJtcyAgICAgICAgPSBjb21wdXRlUm1zRW5lcmd5KGNoYW5uZWxEYXRhLCBmcmFtZVNpemUpOwogICAgY29uc3Qgc21vb3RoZWQgICA9IHNtb290aChybXMsIDQpOyAgICAgICAgICAgICAgICAgICAgIC8vIDQtZnJhbWUgcmFkaXVzID0gOHMgc21vb3RoaW5nCiAgICBjb25zdCBjaGFuZ2Vwb2ludHMgPSBmaW5kQ2hhbmdlcG9pbnRzKHNtb290aGVkLCBNSU5fR0FQX0ZSQU1FUyk7CiAgICBjb25zdCBzZWN0aW9ucyAgICAgPSBsYWJlbFNlY3Rpb25zKGNoYW5nZXBvaW50cywgc21vb3RoZWQsIHNtb290aGVkLmxlbmd0aCk7CgogICAgLy8gQ29udmVydCBmcmFtZSBpbmRpY2VzIHRvIHNlY29uZHMgZm9yIHRoZSBBUEkgcmVzcG9uc2UKICAgIGNvbnN0IHNlY3Rpb25zU2VjID0gc2VjdGlvbnMubWFwKHMgPT4gKHsKICAgICAgdHlwZTogICAgICAgICAgcy50eXBlLAogICAgICBzdGFydFNlYzogICAgICBNYXRoLnJvdW5kKHMuc3RhcnRGcmFtZSAqIEZSQU1FX0RVUkFDSU9OX1NFQyAqIDEwMCkgLyAxMDAsCiAgICAgIGVuZFNlYzogICAgICAgIE1hdGgucm91bmQocy5lbmRGcmFtZSAgICogRlJBTUVfRFVSQUNJT05fU0VDICogMTAwKSAvIDEwMCwKICAgICAgZHVyYXRpb25TZWM6ICAgTWF0aC5yb3VuZCgocy5lbmRGcmFtZSAtIHMuc3RhcnRGcmFtZSkgKiBGUkFNRV9EVVJBQ0lPTl9TRUMgKiAxMDApIC8gMTAwLAogICAgICBlbmVyZ3k6ICAgICAgICBzLmVuZXJneSwKICAgIH0pKTsKCiAgICByZXR1cm4gcmVzLmpzb24oewogICAgICBzZWN0aW9uczogICAgICAgICBzZWN0aW9uc1NlYywKICAgICAgZHVyYXRpb246ICAgICAgICAgTWF0aC5yb3VuZChkdXJhdGlvbiAqIDEwMCkgLyAxMDAsCiAgICAgIGZyYW1lRHVyYXRpb25TZWM6IEZSQU1FX0RVUkFDSU9OX1NFQywKICAgICAgdGltZVNpZ25hdHVyZTogICAgJzQvNCcsICAgLy8gRGVmYXVsdDsgYWRhcHRpdmUgZGV0ZWN0aW9uIGlzIGEgZnV0dXJlIGVuaGFuY2VtZW50CiAgICAgIGFuYWx5emVkQXQ6ICAgICAgIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwKICAgIH0pOwogIH0gY2F0Y2ggKGVycikgewogICAgY29uc29sZS5lcnJvcignW0F1ZGlvUHJvY2Vzc29yXSBFcnJvcjonLCBlcnIubWVzc2FnZSk7CiAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLmpzb24oeyBlcnJvcjogZXJyLm1lc3NhZ2UgfSk7CiAgfQp9KTsKCi8qKgogKiBQT1NUIC9hcGkvYXVkaW8vd2F2ZWZvcm0KICogQm9keTogeyB1cmw6IHN0cmluZywgc2FtcGxlczogbnVtYmVyIChvcHRpb25hbCwgZGVmYXVsdCAxNDQwKSB9CiAqIFJldHVybnM6IHsgcGVha3MsIGR1cmF0aW9uLCBzYW1wbGVSYXRlLCBhbmFseXplZEF0IH0KICovCmF1ZGlvUm91dGVyLnBvc3QoJy93YXZlZm9ybScsIGFzeW5jIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgdXJsLCBzYW1wbGVzID0gMTQ0MCB9ID0gcmVxLmJvZHk7CgogIGlmICghdXJsIHx8IHR5cGVvZiB1cmwgIT09ICdzdHJpbmcnKSB7CiAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDApLmpzb24oeyBlcnJvcjogJ0ZpZWxkICJ1cmwiIGlzIHJlcXVpcmVkIGFuZCBtdXN0IGJlIGEgc3RyaW5nLicgfSk7CiAgfQoKICBjb25zdCB0YXJnZXRTYW1wbGVzID0gTWF0aC5taW4oTWF0aC5tYXgoTnVtYmVyKHNhbXBsZXMpIHx8IDE0NDAsIDI4OCksIDcyMDApOwoKICB0cnkgewogICAgY29uc3QgeyBjaGFubmVsRGF0YSwgc2FtcGxlUmF0ZSwgZHVyYXRpb24gfSA9IGF3YWl0IGZldGNoQXVkaW9CdWZmZXIodXJsKTsKICAgIGNvbnN0IHBlYWtzID0gZXh0cmFjdFdhdmVmb3JtUGVha3MoY2hhbm5lbERhdGEsIHRhcmdldFNhbXBsZXMpOwoKICAgIHJldHVybiByZXMuanNvbih7CiAgICAgIHBlYWtzLAogICAgICBkdXJhdGlvbjogICAgTWF0aC5yb3VuZChkdXJhdGlvbiAqIDEwMCkgLyAxMDAsCiAgICAgIHNhbXBsZVJhdGUsCiAgICAgIGFuYWx5emVkQXQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwKICAgIH0pOwogIH0gY2F0Y2ggKGVycikgewogICAgY29uc29sZS5lcnJvcignW0F1ZGlvUHJvY2Vzc29yXSBFcnJvcjonLCBlcnIubWVzc2FnZSk7CiAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLmpzb24oeyBlcnJvcjogZXJyLm1lc3NhZ2UgfSk7CiAgfQp9KTs=
+import express from 'express';
+import { fetchAudioBuffer } from './bufferLoader.js';
+
+export const audioRouter = express.Router();
+
+// ================================================================
+// WAVEFORM EXTRACTION
+// Reduces the full PCM buffer to peak amplitude values per bin,
+// compatible with wavesurfer.js `peaks` format.
+// ================================================================
+
+/**
+ * Downsamples a PCM buffer to a fixed number of amplitude peaks.
+ * @param {Float32Array} channelData
+ * @param {number} targetSamples - number of output points (default 1440)
+ * @returns {number[]}
+ */
+function extractWaveformPeaks(channelData, targetSamples = 1440) {
+  const total   = channelData.length;
+  const binSize = Math.floor(total / targetSamples);
+  const peaks   = new Array(targetSamples);
+
+  for (let i = 0; i < targetSamples; i++) {
+    let maxAmp = 0;
+    const start = i * binSize;
+    const end   = Math.min(start + binSize, total);
+    for (let j = start; j < end; j++) {
+      const abs = Math.abs(channelData[j]);
+      if (abs > maxAmp) maxAmp = abs;
+    }
+    peaks[i] = Math.round(maxAmp * 10000) / 10000;
+  }
+
+  return peaks;
+}
+
+// ================================================================
+// SECTION SEGMENTATION  (Energy-Based)
+//
+// Algorithm:
+//  1. Compute RMS energy per frame (~2 seconds) over the full track.
+//  2. Smooth with a moving-average kernel to eliminate transients.
+//  3. Detect significant energy changes (derivative threshold).
+//  4. Cluster changepoints into meaningful sections and assign
+//     semantic labels based on position and relative energy level.
+// ================================================================
+
+function computeRmsEnergy(data, frameSize) {
+  const numFrames = Math.floor(data.length / frameSize);
+  const rms       = new Array(numFrames);
+  for (let i = 0; i < numFrames; i++) {
+    let sum = 0;
+    const offset = i * frameSize;
+    for (let j = 0; j < frameSize; j++) {
+      sum += data[offset + j] ** 2;
+    }
+    rms[i] = Math.sqrt(sum / frameSize);
+  }
+  return rms;
+}
+
+function smooth(series, radius) {
+  return series.map((_, i, arr) => {
+    const win = arr.slice(Math.max(0, i - radius), i + radius + 1);
+    return win.reduce((a, b) => a + b, 0) / win.length;
+  });
+}
+
+function findChangepoints(smoothedRms, minGap) {
+  const n           = smoothedRms.length;
+  const derivative  = smoothedRms.map((v, i) =>
+    i === 0 ? 0 : Math.abs(v - smoothedRms[i - 1])
+  );
+  const maxDerivative = Math.max(...derivative);
+  const thresh        = maxDerivative * 0.25;
+
+  const changepoints = [0];
+  let last = 0;
+  for (let i = 1; i < n; i++) {
+    if (derivative[i] >= thresh && (i - last) >= minGap) {
+      changepoints.push(i);
+      last = i;
+    }
+  }
+  changepoints.push(n - 1);
+  return changepoints;
+}
+
+function labelSections(changepoints, smoothedRms, totalFrames) {
+  const segments = [];
+  for (let i = 0; i < changepoints.length - 1; i++) {
+    const startF = changepoints[i];
+    const endF   = changepoints[i + 1];
+    const slice  = smoothedRms.slice(startF, endF);
+    const meanE  = slice.reduce((a, b) => a + b, 0) / slice.length;
+    segments.push({ startF, endF, energy: meanE, length: endF - startF });
+  }
+
+  if (segments.length === 0) return [];
+
+  const maxEnergy   = Math.max(...segments.map(s => s.energy));
+  const labelCounter = {};
+
+  return segments.map((seg) => {
+    const posInTrack = seg.startF / totalFrames;
+    const endPos     = seg.endF   / totalFrames;
+    const relEnergy  = maxEnergy > 0 ? seg.energy / maxEnergy : 0;
+
+    let type;
+    if (posInTrack < 0.08 && seg.length / totalFrames < 0.15) {
+      type = 'intro';
+    } else if (endPos > 0.92 && seg.length / totalFrames < 0.15) {
+      type = 'outro';
+    } else if (relEnergy > 0.75) {
+      type = 'chorus';
+    } else if (relEnergy > 0.40) {
+      type = 'verse';
+    } else {
+      type = 'bridge';
+    }
+
+    labelCounter[type] = (labelCounter[type] || 0) + 1;
+    const label = labelCounter[type] > 1 ? `${type} ${labelCounter[type]}` : type;
+
+    return { type: label, startFrame: seg.startF, endFrame: seg.endF, energy: Math.round(seg.energy * 10000) / 10000 };
+  });
+}
+
+// ================================================================
+// ROUTES
+// ================================================================
+
+/**
+ * POST /api/audio/structure
+ * Body: { url: string }
+ * Returns: { sections, duration, timeSignature, frameDurationSec, analyzedAt }
+ */
+audioRouter.post('/structure', async (req, res) => {
+  const { url } = req.body;
+
+  if (!url || typeof url !== 'string') {
+    return res.status(400).json({ error: 'Field "url" is required and must be a string.' });
+  }
+
+  try {
+    const { channelData, sampleRate, duration } = await fetchAudioBuffer(url);
+
+    const FRAME_DURATION_SEC = 2;
+    const frameSize          = Math.floor(sampleRate * FRAME_DURATION_SEC);
+    const MIN_GAP_FRAMES     = 8;
+
+    const rms          = computeRmsEnergy(channelData, frameSize);
+    const smoothed     = smooth(rms, 4);
+    const changepoints = findChangepoints(smoothed, MIN_GAP_FRAMES);
+    const sections     = labelSections(changepoints, smoothed, smoothed.length);
+
+    const sectionsSec = sections.map(s => ({
+      type:         s.type,
+      startSec:     Math.round(s.startFrame * FRAME_DURATION_SEC * 100) / 100,
+      endSec:       Math.round(s.endFrame   * FRAME_DURATION_SEC * 100) / 100,
+      durationSec:  Math.round((s.endFrame - s.startFrame) * FRAME_DURATION_SEC * 100) / 100,
+      energy:       s.energy,
+    }));
+
+    return res.json({
+      sections:         sectionsSec,
+      duration:         Math.round(duration * 100) / 100,
+      frameDurationSec: FRAME_DURATION_SEC,
+      timeSignature:    '4/4',
+      analyzedAt:       new Date().toISOString(),
+    });
+  } catch (err) {
+    console.error('[AudioProcessor] Error:', err.message);
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+/**
+ * POST /api/audio/waveform
+ * Body: { url: string, samples: number (optional, default 1440) }
+ * Returns: { peaks, duration, sampleRate, analyzedAt }
+ */
+audioRouter.post('/waveform', async (req, res) => {
+  const { url, samples = 1440 } = req.body;
+
+  if (!url || typeof url !== 'string') {
+    return res.status(400).json({ error: 'Field "url" is required and must be a string.' });
+  }
+
+  const targetSamples = Math.min(Math.max(Number(samples) || 1440, 288), 7200);
+
+  try {
+    const { channelData, sampleRate, duration } = await fetchAudioBuffer(url);
+    const peaks = extractWaveformPeaks(channelData, targetSamples);
+
+    return res.json({
+      peaks,
+      duration:    Math.round(duration * 100) / 100,
+      sampleRate,
+      analyzedAt: new Date().toISOString(),
+    });
+  } catch (err) {
+    console.error('[AudioProcessor] Error:', err.message);
+    return res.status(500).json({ error: err.message });
+  }
+});
